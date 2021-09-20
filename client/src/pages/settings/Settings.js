@@ -15,6 +15,10 @@ const Settings = () => {
   const PF = "https://pathblog.herokuapp.com/images/";
   const [cat, setCat] = useState("");
 
+  const axiosInst = axios.create({
+    baseURL: process.env.REACT_APP_API_URL,
+  });
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: "UPDATE_START" });
@@ -31,11 +35,11 @@ const Settings = () => {
       data.append("file", file);
       updatedUser.profileImg = filename;
       try {
-        await axiosInstance.post("/upload", data);
+        await axiosInst.post("/upload", data);
       } catch (error) {}
     }
     try {
-      const res = await axiosInstance.put("/users/" + user._id, updatedUser);
+      const res = await axiosInst.put("/users/" + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (error) {
@@ -49,7 +53,7 @@ const Settings = () => {
       name: cat,
     };
     try {
-      await axiosInstance.post("/categories", newCat);
+      await axiosInst.post("/categories", newCat);
     } catch (error) {}
   };
 

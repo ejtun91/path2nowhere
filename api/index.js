@@ -8,11 +8,13 @@ const postRouter = require("./routes/posts");
 const categoryRouter = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
+const cors = require("cors");
 
 dotenv.config();
 
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
+app.use(cors());
 
 mongoose
   .connect(process.env.MONGO_URL, {

@@ -47,6 +47,6 @@ app.use("/api/users", userRouter);
 app.use("/api/posts", postRouter);
 app.use("/api/categories", categoryRouter);
 
-app.listen(5000, () => {
+app.listen(process.env.PORt || 8800, () => {
   console.log("backend server is running");
 });

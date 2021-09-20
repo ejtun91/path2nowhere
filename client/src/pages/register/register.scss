@@ -1,0 +1,29 @@
+.register {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .registerWrapper {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .registerTitle {
+      margin-bottom: 3em;
+    }
+
+    .registerForm {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .inputRegister {
+        margin-bottom: 2em;
+        width: 30%;
+      }
+    }
+  }
+}

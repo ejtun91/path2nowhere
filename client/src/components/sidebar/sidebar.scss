@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+.sidebar {
+  flex: 1 !important;
+  border-left: 1px solid lightgrey;
+  max-width: 33.33%;
+
+  .wrapperSidebar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid lightgrey;
+    }
+
+    .columnTitle {
+      background-color: black;
+      display: inline-block;
+      color: white;
+      width: 80%;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      padding: 10px 0;
+      letter-spacing: 1px;
+      border-radius: 2px;
+    }
+
+    .aboutMeSection {
+      .aboutTitle {
+      }
+
+      img {
+        max-width: 50%;
+        max-height: 50%;
+        border-radius: 50%;
+        margin-top: 20px;
+      }
+
+      .descAbout {
+        text-align: center;
+        font-size: 13px;
+        padding: 15px;
+      }
+
+      .signAbout {
+        font-family: "Playball", cursive;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+    }
+
+    .socialMeSection {
+      .socialList {
+        list-style: none;
+        margin: 0;
+        padding: 20px 0;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+
+        .icon {
+          margin-right: 12px;
+        }
+      }
+    }
+
+    .otherPostsSection {
+      padding-bottom: 2em;
+      .otherPostsTitle {
+        margin-bottom: 1em;
+      }
+
+      .postSections {
+        display: flex;
+        width: 80%;
+        padding: 10px;
+        border-bottom: 1px solid lightgrey;
+        .postSection {
+          display: flex;
+          width: 80%;
+          padding: 10px;
+
+          img {
+            width: 80px;
+            height: 50px;
+            margin-right: 10px;
+          }
+          .postInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .otherTitle {
+              display: inline-block;
+              width: 10em;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+            span {
+              font-size: 12px;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            }
+
+            .dateOther {
+              font-size: 10px;
+              font-weight: 300;
+              margin-bottom: 0.5em;
+            }
+          }
+        }
+      }
+    }
+    .categoriesSection {
+      padding-bottom: 20px;
+      .categoriesList {
+        list-style: none;
+        padding: 20px;
+        margin: 0;
+        width: 80%;
+
+        .categoryItem {
+          position: relative;
+          border-bottom: 1px solid lightgrey;
+          padding: 10px 0;
+          font-size: 14px;
+          letter-spacing: 1px;
+
+          .numberOfPostsCat {
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    border-left: none;
+    max-width: 100%;
+    .dateOther {
+      font-size: 10px !important;
+    }
+    .otherTitle {
+      font-size: 10px !important;
+      font-weight: 700;
+    }
+  }
+}

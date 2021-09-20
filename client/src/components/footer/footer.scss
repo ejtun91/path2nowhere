@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapperFooter {
+    width: 90%;
+    padding-top: 5em;
+    padding-bottom: 1em;
+
+    .containerFooter {
+      align-self: center;
+      width: 100%;
+      height: 50px;
+      margin-bottom: 1em;
+      border-top: 1px solid lightgray;
+      border-bottom: 1px solid lightgray;
+    }
+    .logo {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      font-size: 30px;
+      letter-spacing: 5px;
+      font-style: italic;
+      font-family: "Playball", cursive;
+
+      .madeBy {
+        font-style: normal;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .containerFooter {
+    height: 20px !important;
+  }
+  .logo {
+    font-size: 1.1em !important;
+  }
+  .madeBy {
+    font-size: 0.5em !important;
+  }
+}

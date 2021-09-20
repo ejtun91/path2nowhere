@@ -1,0 +1,76 @@
+.posts {
+  flex: 2;
+  margin-top: 2.5rem;
+
+  .pagButtons {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .paginationBttns {
+      width: 100%;
+      height: 40px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .paginationBttns a {
+      padding: 2px 20px;
+      margin-right: 5px;
+      border-radius: 5px;
+      border: 1px solid rgb(170, 170, 170);
+      color: #030d22;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .paginationBttns a:hover {
+      color: white;
+      background-color: darkgoldenrod;
+    }
+
+    .paginationActive a {
+      color: white;
+      background-color: darkgoldenrod;
+    }
+
+    .paginationDisabled a {
+      color: rgb(255, 255, 255);
+      cursor: not-allowed;
+      color: transparent;
+    }
+
+    .paginationDisabled a:hover {
+      color: white;
+      background-color: white;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .pagButtons {
+    height: 150px;
+    margin-bottom: 1em;
+    width: 270px !important;
+
+    .paginationBttns {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+      max-height: 20%;
+    }
+
+    .paginationBttns a {
+      display: flex;
+      flex-direction: column;
+      border: none;
+      margin-bottom: 5px;
+    }
+
+    .paginationActive a {
+      text-align: center;
+    }
+  }
+}

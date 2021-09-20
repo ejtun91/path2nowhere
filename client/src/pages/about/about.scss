@@ -1,0 +1,53 @@
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .aboutWrapper {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .titleAbout {
+      text-align: center;
+      margin-bottom: 2em;
+      margin-top: 3em;
+      font-size: 23px;
+    }
+
+    img {
+      height: 400px;
+      width: 45%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .descAbout {
+      margin-top: 2em;
+      width: 70%;
+      letter-spacing: 1px;
+      line-height: 1.5;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about {
+    .aboutWrapper {
+      width: 100%;
+      .aboutImg {
+        max-height: 200px;
+        width: 70%;
+      }
+
+      .descAbout {
+        width: 85%;
+        text-align: center;
+        font-size: 0.8em;
+      }
+    }
+  }
+}

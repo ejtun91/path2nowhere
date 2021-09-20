@@ -1,0 +1,34 @@
+.login {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loginWrapper {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .loginTitle {
+      margin-bottom: 3em;
+    }
+
+    .loginForm {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .inputLogin {
+        margin-bottom: 2em;
+        width: 30%;
+      }
+
+      .loginBtn:disabled {
+        cursor: not-allowed;
+        background-color: white;
+      }
+    }
+  }
+}

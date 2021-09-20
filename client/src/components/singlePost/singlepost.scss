@@ -1,0 +1,160 @@
+.singlePost {
+  flex: 2;
+  margin-top: 3em;
+
+  .wrapperSinglePost {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid lightgrey;
+
+    .catTitle {
+      font-size: 12px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      align-self: center;
+      text-transform: uppercase;
+    }
+
+    .postMainTitle {
+      margin-top: 0.6rem;
+      font-size: 1.6em;
+      text-transform: uppercase;
+      color: darkgoldenrod;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .singlePostTitleInput {
+      margin-top: 0.6rem;
+      font-size: 1.6em;
+      border: none;
+      border-bottom: 1px solid darkgoldenrod;
+      text-align: center;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .singlePostEdit {
+      align-self: flex-end;
+      padding: 20px;
+
+      .singlePostIcon {
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:first-child {
+          color: cornflowerblue;
+        }
+
+        &:last-child {
+          color: crimson;
+        }
+      }
+    }
+
+    .dateMainTitle {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 0.5em;
+      align-self: center;
+    }
+
+    .postMainImg {
+      width: 100%;
+      margin-top: 1em;
+      object-fit: cover;
+      height: 500px;
+      align-self: center;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .postDesc {
+      padding: 20px;
+      font-size: 15px;
+      color: #333;
+      font-weight: 500;
+      margin-top: 2 em;
+      line-height: 2;
+      letter-spacing: 2px;
+      text-align: start;
+
+      &::first-letter {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+    p:first-child:first-letter {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .descInput {
+      width: 100%;
+      padding: 20px;
+      font-size: 15px;
+      color: #333;
+      font-weight: 500;
+      margin-top: 2 em;
+      line-height: 2;
+      letter-spacing: 2px;
+      border: none;
+      border-bottom: 1px solid darkgoldenrod;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .singlePostBtn {
+    border: 1px solid darkgoldenrod;
+    padding: 10px 20px;
+    align-self: flex-end;
+    margin-top: 2em;
+    background-color: white;
+    color: darkgoldenrod;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: darkgoldenrod;
+      color: white;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .singlePost {
+    .wrapperSinglePost {
+      .postMainImg {
+        display: inline-block;
+        text-align: center;
+        height: 200px;
+        width: 95% !important;
+      }
+
+      .postMainTitle {
+        font-size: 1.1em !important;
+      }
+
+      .catTitle {
+        text-transform: uppercase;
+        font-size: 11px !important;
+      }
+
+      .dateMainTitle {
+        font-size: 11px !important;
+      }
+
+      .postDesc {
+        font-size: 13px !important;
+      }
+    }
+  }
+}

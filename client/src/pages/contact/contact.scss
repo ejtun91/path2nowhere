@@ -1,0 +1,94 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contactWrapper {
+    width: 50%;
+
+    .contactTitle {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin-top: 3em;
+      margin-bottom: 2em;
+      font-size: 23px;
+    }
+
+    .contactDesc {
+      margin: 0 auto;
+      line-height: 1.5;
+      font-size: 0.9em;
+      margin-bottom: 2em;
+      width: 60%;
+    }
+
+    .contactForm {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+
+      .input {
+        margin-bottom: 2em;
+        border: 1px solid lightgrey;
+        padding: 10px;
+
+        &:focus {
+          outline: 1px solid lightgrey;
+        }
+      }
+
+      .messageContact {
+        padding: 20px;
+        height: 70px;
+        border: 1px solid lightgrey;
+
+        &:focus {
+          outline: 1px solid lightgrey;
+        }
+      }
+
+      .red-star {
+        color: red;
+      }
+
+      .submitBtn {
+        margin-top: 2em;
+        width: 20%;
+        border-radius: 5px;
+        border: 1px solid lightgrey;
+        background-color: white;
+        font-weight: 600;
+        padding: 5px 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: gray;
+          color: white;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact {
+    .contactWrapper {
+      width: 80%;
+      .contactDesc {
+        font-size: 0.8em;
+        width: 100%;
+        text-align: center;
+      }
+
+      .contactForm {
+        width: 100%;
+
+        .submitBtn {
+          width: max-content;
+        }
+      }
+    }
+  }
+}

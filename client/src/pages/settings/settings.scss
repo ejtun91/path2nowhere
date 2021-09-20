@@ -1,0 +1,116 @@
+.settings {
+  display: flex;
+  margin-top: 2em;
+  justify-content: center;
+  .settingsWrapper {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+
+    .settingsForm {
+      width: 100%;
+      flex: 1;
+    }
+
+    .createCat {
+      margin-top: 2em;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 200px;
+    }
+
+    .settingsFormGroup {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .settingsImg {
+        height: 100px;
+        width: 100px;
+        align-self: center;
+        object-fit: cover;
+        border: 1px solid #000;
+        margin-bottom: 20px;
+        padding: 5px;
+      }
+
+      .inputSettingsAdd {
+        align-self: center;
+        margin-bottom: 2em;
+        cursor: pointer;
+        position: relative;
+
+        .iconSettings {
+          font-size: 35px;
+        }
+
+        .addImg {
+          font-size: 15px;
+          position: absolute;
+          top: 25%;
+        }
+      }
+      .inputSettingsUsername {
+        border: 1px solid darkgoldenrod;
+        width: 30%;
+        align-self: center;
+        font-size: 18px;
+        padding: 10px;
+        margin-bottom: 2em;
+        border-radius: 5px;
+
+        &:focus {
+          outline: darkgoldenrod;
+        }
+      }
+
+      .inputSettingsEmail {
+        border: 1px solid darkgoldenrod;
+        width: 30%;
+        align-self: center;
+        font-size: 18px;
+        padding: 10px;
+        margin-bottom: 2em;
+        border-radius: 5px;
+
+        &:focus {
+          outline: darkgoldenrod;
+        }
+      }
+
+      .inputTextPassword {
+        font-size: 18px;
+        padding: 10px;
+        border: 1px solid darkgoldenrod;
+        margin-bottom: 2em;
+        width: 30%;
+        align-self: center;
+
+        &:focus {
+          outline: darkgoldenrod;
+        }
+      }
+
+      .settingsSubmitBtn {
+        align-self: center;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        color: darkgoldenrod;
+        background-color: white;
+        border: 1px solid darkgoldenrod;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: 700;
+
+        &:hover {
+          background-color: darkgoldenrod;
+          color: white;
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}

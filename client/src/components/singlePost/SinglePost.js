@@ -19,9 +19,13 @@ const SinglePost = () => {
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
 
+  const axiosInst = axios.create({
+    baseURL: process.env.REACT_APP_API_URL,
+  });
+
   useEffect(() => {
     const getPost = async () => {
-      const res = await axiosInstance.get("/posts/" + path);
+      const res = await axiosInst.get("/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
@@ -31,7 +35,7 @@ const SinglePost = () => {
 
   const handleDelete = async () => {
     try {
-      await axiosInstance.delete(`/posts/${post._id}`, {
+      await axiosInst.delete(`/posts/${post._id}`, {
         data: { username: user.username },
       });
       window.location.replace("/");
@@ -40,7 +44,7 @@ const SinglePost = () => {
 
   const handleUpdate = async () => {
     try {
-      await axiosInstance.put(`/posts/${post._id}`, {
+      await axiosInst.put(`/posts/${post._id}`, {
         username: user.username,
         title,
         desc,

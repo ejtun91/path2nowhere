@@ -12,9 +12,13 @@ const Single = () => {
   const { search } = useLocation();
   const [cats, setCats] = useState([]);
 
+  const axiosInst = axios.create({
+    baseURL: process.env.REACT_APP_API_URL,
+  });
+
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axiosInstance.get("/posts" + search);
+      const res = await axiosInst.get("/posts" + search);
       setPosts(res.data);
     };
     fetchPosts();
@@ -26,7 +30,7 @@ const Single = () => {
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axiosInstance.get("/categories");
+      const res = await axiosInst.get("/categories");
       setCats(res.data);
     };
     getCats();

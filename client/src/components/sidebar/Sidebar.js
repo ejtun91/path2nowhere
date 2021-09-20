@@ -8,14 +8,14 @@ import { axiosInstance } from "../../config";
 
 const Sidebar = ({ posts, cats }) => {
   const { user } = useContext(Context);
-  const PF = "https://pathblog.herokuapp.com/images/";
+  const PF = "https://path2nowhere.com/images/";
 
   return (
     <div className="sidebar">
       <div className="wrapperSidebar">
         <div className="aboutMeSection column">
           <span className="aboutTitle columnTitle">ABOUT ME</span>
-          <img src="https://pathblog.herokuapp.com/images/profile.jpg" alt="" />
+          <img src="https://path2nowhere.com/images/profile.jpg" alt="" />
           <p className="descAbout">
             Hi, I am Antonio and here you will find my latest critiques of the
             world and society. I will try to be consistent on this blog, and if

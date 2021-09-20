@@ -21,6 +21,10 @@ const Write = () => {
   const [uploaded, setUploaded] = useState(false);
   const { user } = useContext(Context);
 
+  const axiosInst = axios.create({
+    baseURL: process.env.REACT_APP_API_URL,
+  });
+
   const firebaseConfig = {
     apiKey: "AIzaSyB4gzpovnBYAtF_-8ZMeqlpygBMk-CsVho",
     authDomain: "blog-c048e.firebaseapp.com",
@@ -57,7 +61,7 @@ const Write = () => {
     // }
     //   }
     try {
-      const res = await axiosInstance.post("/posts", newPost);
+      const res = await axiosInst.post("/posts", newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (error) {}
   };

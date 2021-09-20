@@ -13,9 +13,13 @@ const Home = () => {
   const [cats, setCats] = useState([]);
   const [movies, setMovies] = useState([]);
 
+  const axiosInst = axios.create({
+    baseURL: process.env.REACT_APP_API_URL,
+  });
+
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axiosInstance.get("/posts" + search);
+      const res = await axiosInst.get("/posts" + search);
       setPosts(res.data);
     };
     fetchPosts();
@@ -23,23 +27,12 @@ const Home = () => {
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axiosInstance.get("/categories");
+      const res = await axiosInst.get("/categories");
       setCats(res.data);
     };
     getCats();
   }, []);
 
-  useEffect(() => {
-    const getMovies = async () => {
-      const res = await axios.get(
-        `https://yts.unblockit.ws/api/v2/list_movies.json`,
-        { headers: { "Access-Control-Allow-Origin": "*" } }
-      );
-      setMovies(res.data.data.movies);
-    };
-    getMovies();
-  }, []);
-  console.log(movies);
   return (
     <div className="home">
       <div className="wrapper">

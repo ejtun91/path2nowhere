@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import parse from "html-react-parser";
 
 const Post = ({ post }) => {
-  const PF = "https://pathblog.herokuapp.com/images/";
   return (
     <div className="post">
       <div className="wrapperPost">

@@ -12,33 +12,43 @@ import { Context } from "./context/Context";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import ScrollToTop from "react-router-scroll-top";
+import { ThemeContext } from "./context";
 
 function App() {
   const { user } = useContext(Context);
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <Router>
-      <ScrollToTop>
-        <Header />
-        <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/post/:id">
-            <Single />
-          </Route>
-          <Route path="/write">{user ? <Write /> : <Login />}</Route>
-          <Route path="/settings">{user ? <Settings /> : <Login />}</Route>
-          <Route path="/register">{user ? <Home /> : <Register />}</Route>
-          <Route path="/login">{user ? <Home /> : <Login />}</Route>
-        </Switch>
-      </ScrollToTop>
+      <div
+        style={{
+          backgroundColor: darkMode ? "#333333" : "white",
+          color: darkMode && "white",
+        }}
+      >
+        <ScrollToTop>
+          <Header />
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/post/:id">
+              <Single />
+            </Route>
+            <Route path="/write">{user ? <Write /> : <Login />}</Route>
+            <Route path="/settings">{user ? <Settings /> : <Login />}</Route>
+            <Route path="/register">{user ? <Home /> : <Register />}</Route>
+            <Route path="/login">{user ? <Home /> : <Login />}</Route>
+          </Switch>
+        </ScrollToTop>
+      </div>
     </Router>
   );
 }

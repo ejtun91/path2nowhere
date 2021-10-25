@@ -6,6 +6,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import { axiosInstance } from "../../config";
+require("dotenv").config();
 
 const Home = () => {
   const [posts, setPosts] = useState([]);

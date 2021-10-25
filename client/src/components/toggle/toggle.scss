@@ -1,0 +1,31 @@
+.wrapperToggle {
+  width: 50px;
+  height: 25px;
+  border-radius: 20px;
+  border: 2px solid #777777;
+  background-color: white;
+  z-index: 999;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.iconToggle {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+
+.btnToggle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #929292;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.5s ease;
+}

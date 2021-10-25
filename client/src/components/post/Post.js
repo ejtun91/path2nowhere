@@ -27,7 +27,7 @@ const Post = ({ post }) => {
             </Link>
           </div>
         )}
-        <p className="postDesc">{parse(post.desc)}</p>
+        <p className="postDesc">{post.desc}</p>
         <div className="postDetailInfo">
           <div className="postLinks">
             <ul className="socialList">
